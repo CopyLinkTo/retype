@@ -11,3 +11,20 @@ links:
 favicon: assets/favicon.ico
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
+name: GitHub Action for Retype
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: retypeapp/action-build@v2
+
+      - uses: retypeapp/action-github-pages@v2
+    with:
+      branch: main
+      update-branch: true
