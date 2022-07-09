@@ -1,3 +1,3 @@
 # Introduction
 
-How to get started with Retype 2
+How to get started with Retype 3
